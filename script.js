@@ -537,7 +537,6 @@ langSelect?.addEventListener(
  e=>applyLanguage(e.target.value)
 );
 
-applyLanguage(lang);
 
 
 const modal=document.getElementById('modal');
@@ -778,7 +777,7 @@ function refreshShareLinks(){
 
 
 refreshShareLinks();
-
+applyLanguage(lang);
 
 /* =========================================================
    LOCAL WEDDING MUSIC
