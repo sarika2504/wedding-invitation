@@ -6,85 +6,675 @@
 <meta property="og:title" content="Bhumika ♥ Rakesh | The Beginning of Forever">
 <meta property="og:description" content="Join Bhumika and Rakesh as they begin their forever. 13 November · Ballary">
 <meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Great+Vibes&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"></head><body>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
 <script>
 (function(){
   function openWeddingDoors(){
     var overlay=document.getElementById('entryOverlay');
     var door=document.getElementById('entryDoor');
+
     if(!overlay || !door) return;
+
     door.classList.add('opened');
     door.style.pointerEvents='none';
-    setTimeout(function(){ overlay.classList.add('finished'); }, 1450);
+
+    setTimeout(function(){
+      overlay.classList.add('finished');
+    },1450);
   }
-  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function(){ setTimeout(openWeddingDoors, 300); }, {once:true});
-  else setTimeout(openWeddingDoors, 300);
-  window.addEventListener('load', function(){ setTimeout(openWeddingDoors, 300); }, {once:true});
+
+  if(document.readyState === 'loading'){
+    document.addEventListener(
+      'DOMContentLoaded',
+      function(){
+        setTimeout(openWeddingDoors,300);
+      },
+      {once:true}
+    );
+  }else{
+    setTimeout(openWeddingDoors,300);
+  }
+
+  window.addEventListener(
+    'load',
+    function(){
+      setTimeout(openWeddingDoors,300);
+    },
+    {once:true}
+  );
 })();
 </script>
+
 <div id="entryOverlay" class="entry-overlay" aria-label="Wedding invitation opening">
+
   <div class="entry-glow"></div>
+
   <div class="entry-content">
+
     <p class="entry-kicker" data-i18n="entryKicker">WELCOME</p>
+
     <div class="entry-door" id="entryDoor" aria-hidden="true">
-      <div class="door door-left"><span>B</span></div><div class="door door-right"><span>R</span></div>
-      <div class="door-handle left-handle"></div><div class="door-handle right-handle"></div>
+      <div class="door door-left"><span>B</span></div>
+      <div class="door door-right"><span>R</span></div>
+      <div class="door-handle left-handle"></div>
+      <div class="door-handle right-handle"></div>
     </div>
-    <p class="entry-hint" data-i18n="entryHint">Welcome to our celebration</p>
+
+    <p class="entry-hint" data-i18n="entryHint">
+      Welcome to our celebration
+    </p>
+
   </div>
-  <label class="entry-language"><span>🌐</span><select id="entryLanguageSelect" aria-label="Select language"><option value="en">English</option><option value="kn">ಕನ್ನಡ</option><option value="te">తెలుగు</option></select></label>
+
+  <label class="entry-language">
+    <span>🌐</span>
+    <select id="entryLanguageSelect" aria-label="Select language">
+      <option value="en">English</option>
+      <option value="kn">ಕನ್ನಡ</option>
+      <option value="te">తెలుగు</option>
+    </select>
+  </label>
+
 </div>
-<header class="nav"><a class="brand" href="#home">B <span>♥</span> R</a><button class="menu">☰</button>
-<nav><a href="#story" data-i18n="navStory">Story</a><a href="#couple" data-i18n="navCouple">Couple</a><a href="#events" data-i18n="navEvents">Events</a><a href="#gallery" data-i18n="navGallery">Gallery</a><a href="#venue" data-i18n="navVenue">Venue</a><a href="#guestbook" data-i18n="navWishes">Wishes</a><a href="#rsvp" data-i18n="navRsvp">RSVP</a><label class="lang-picker"><span>🌐</span><select id="languageSelect" aria-label="Select language"><option value="en">English</option><option value="kn">ಕನ್ನಡ</option><option value="te">తెలుగు</option></select></label></nav></header>
-<button id="musicToggle" class="music-toggle" aria-label="Play wedding music"><span class="music-icon">♫</span><span id="musicText" data-i18n="musicSoft">Music</span></button>
 
-<section id="home" class="hero"><div class="hero-bg"></div><div class="hero-shade"></div><div class="hero-text">
-<p class="eyebrow" data-i18n="heroEyebrow">THE BEGINNING OF FOREVER</p><p class="script" data-i18n="heroScript">Two hearts · one beautiful beginning</p>
-<h1><span>Bhumika G</span><em data-i18n="weds">Weds</em><strong>Rakesh Patil</strong></h1><div class="rule"></div>
-<p class="date" data-i18n="heroDate">13 NOVEMBER · 8:00 AM</p><p class="place" data-i18n="heroPlace">Sri Bharathi Theertha Sabhabhavana · Sangankallu Road · Ballary</p>
-<a class="btn" href="#events" data-i18n="heroButton">Explore the Celebration ↓</a></div></section>
+<header class="nav">
+
+  <a class="brand" href="#home">
+    B <span>♥</span> R
+  </a>
+
+  <button class="menu">☰</button>
+
+  <nav>
+    <a href="#story" data-i18n="navStory">Story</a>
+    <a href="#couple" data-i18n="navCouple">Couple</a>
+    <a href="#events" data-i18n="navEvents">Events</a>
+    <a href="#gallery" data-i18n="navGallery">Gallery</a>
+    <a href="#venue" data-i18n="navVenue">Venue</a>
+    <a href="#guestbook" data-i18n="navWishes">Wishes</a>
+    <a href="#rsvp" data-i18n="navRsvp">RSVP</a>
+
+    <label class="lang-picker">
+      <span>🌐</span>
+      <select id="languageSelect" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="kn">ಕನ್ನಡ</option>
+        <option value="te">తెలుగు</option>
+      </select>
+    </label>
+  </nav>
+
+</header>
+
+<!-- MUSIC BUTTON -->
+<button id="musicToggle" class="music-toggle" aria-label="Play wedding music">
+  <span class="music-icon">♫</span>
+  <span id="musicText" data-i18n="musicSoft">Music</span>
+</button>
+
+<!-- LOCAL MP3 -->
+<audio id="weddingMusic" preload="auto" loop>
+  <source src="assets/romantic-wedding-tune.mp3" type="audio/mpeg">
+</audio>
 
 
+<section id="home" class="hero">
 
-<section class="count"><p class="eyebrow" data-i18n="countEyebrow">COUNTING DOWN TO FOREVER</p><h2 data-i18n="countTitle">Our wedding day is almost here</h2>
-<div class="timer"><div><b id="d">00</b><small data-i18n="days">Days</small></div><div><b id="h">00</b><small data-i18n="hours">Hours</small></div><div><b id="m">00</b><small data-i18n="minutes">Minutes</small></div><div><b id="s">00</b><small data-i18n="seconds">Seconds</small></div></div>
-<p data-i18n="countDate">13 November · Muhurtham at 8:00 AM</p></section>
+  <div class="hero-bg"></div>
+  <div class="hero-shade"></div>
 
-<section id="story" class="section story"><div class="label" data-i18n="storyLabel">01 · OUR STORY</div><div class="two">
-<div><p class="eyebrow" data-i18n="storyEyebrow">FROM A MOMENT TO A LIFETIME</p><h2><span data-i18n="storyTitle1">And suddenly,</span><br><i data-i18n="storyTitle2">forever made sense.</i></h2></div>
-<div class="copy"><p data-i18n="storyP1">Some stories begin quietly, some unexpectedly — and then two people discover that every little moment has been leading them here.</p>
-<p data-i18n="storyP2">From shared smiles and little adventures to the promise of walking through every chapter together, Bhumika and Rakesh are beginning their forever surrounded by the people they love.</p><div class="signature" data-i18n="signature">The Beginning of Forever ♥</div></div></div></section>
+  <div class="hero-text">
 
-<section id="couple" class="section couple">
-<div class="person"><img src="assets/bride_portrait.jpg" alt="Bhumika G"><p class="eyebrow" data-i18n="brideLabel">THE BRIDE</p><h2>Bhumika G</h2><p><span data-i18n="daughterOf">Daughter of</span><br><b>Palakshi Gowda G</b> & <b>Neelavathi G</b></p><p class="muted"><span data-i18n="brother">Brother</span> · Gagan Gowda G</p></div>
-<div class="heart">♥</div>
-<div class="person"><img src="assets/groom_first_photo.jpg" alt="Rakesh Patil"><p class="eyebrow" data-i18n="groomLabel">THE GROOM</p><h2>Rakesh Patil</h2><p><span data-i18n="sonOf">Son of</span><br><b>Pompana Gowda Patil</b> & <b>Preemalatha</b></p></div>
+    <p class="eyebrow" data-i18n="heroEyebrow">
+      THE BEGINNING OF FOREVER
+    </p>
+
+    <p class="script" data-i18n="heroScript">
+      Two hearts · one beautiful beginning
+    </p>
+
+    <h1>
+      <span>Bhumika G</span>
+      <em data-i18n="weds">Weds</em>
+      <strong>Rakesh Patil</strong>
+    </h1>
+
+    <div class="rule"></div>
+
+    <p class="date" data-i18n="heroDate">
+      13 NOVEMBER · 8:00 AM
+    </p>
+
+    <p class="place" data-i18n="heroPlace">
+      Sri Bharathi Theertha Sabhabhavana · Sangankallu Road · Ballary
+    </p>
+
+    <a class="btn" href="#events" data-i18n="heroButton">
+      Explore the Celebration ↓
+    </a>
+
+  </div>
+
 </section>
 
-<section id="events" class="section events"><div class="heading"><div class="label" data-i18n="eventsLabel">02 · THE CELEBRATION</div><p class="eyebrow" data-i18n="eventsEyebrow">CLICK AN EVENT TO EXPLORE</p><h2 data-i18n="eventsTitle">Wedding Events</h2><p data-i18n="eventsSub">Every celebration has its own little magic.</p></div>
-<div class="cards">
-<button class="card event-haldi" data-event="haldi"><span class="event-icon">🌼</span><small data-i18n="haldiName">HALDI</small><h3 data-i18n="haldiTitle">Haldi Ceremony</h3><p data-event-date="haldi">12 November · 10:00 AM</p><b data-i18n="viewDetails">View details ↗</b></button>
-<button class="card event-engagement" data-event="engagement"><span class="event-icon">💍</span><small data-i18n="engagementName">ENGAGEMENT</small><h3 data-i18n="engagementTitle">Ring Ceremony</h3><p data-event-date="engagement">12 November · 8:00 PM</p><b data-i18n="viewDetails">View details ↗</b></button>
-<button class="card event-muhurtham" data-event="muhurtham"><span class="event-icon">🪔</span><small data-i18n="muhurthamName">MUHURTHAM</small><h3 data-i18n="muhurthamTitle">Wedding Ceremony</h3><p data-event-date="muhurtham">13 November · 8:00 AM</p><b data-i18n="viewDetails">View details ↗</b></button>
-<button class="card event-reception" data-event="reception"><span class="event-icon">✨</span><small data-i18n="receptionName">RECEPTION</small><h3 data-i18n="receptionTitle">Reception</h3><p data-event-date="reception">13 November · 12:00 Noon</p><b data-i18n="viewDetails">View details ↗</b></button>
-</div></section>
 
-<section id="gallery" class="section gallery"><div class="heading"><div class="label" data-i18n="galleryLabel">03 · OUR MOMENTS</div><p class="eyebrow" data-i18n="galleryEyebrow">A LITTLE GLIMPSE OF US</p><h2 data-i18n="galleryTitle">One favourite frame</h2><p data-i18n="gallerySub">One photograph, kept simple — because the story is already beautiful.</p></div>
-<div class="single-photo"><figure><img src="assets/hero_romantic.jpg" alt="Bhumika and Rakesh together"><figcaption data-i18n="galleryCaption">Where every moment feels like home. ♥</figcaption></figure></div></section>
+<section class="count">
 
-<section id="venue" class="venue"><div class="venue-photo"><img src="assets/venue_sri_bharathi.jpeg" alt="Sri Bharathi Theertha Sabhabhavana, Sangankallu Road, Ballary"></div><div class="venue-text"><div class="label" data-i18n="venueLabel">04 · FIND US</div><p class="eyebrow" data-i18n="venueEyebrow">THE WEDDING VENUE</p><h2>Sri Bharathi Theertha<br>Sabhabhavana</h2><p>Sangankallu Road<br>Ballary, Karnataka</p>
-<a class="btn dark" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Sri+Bharathi+Theertha+Sabhabhavana+Sangankallu+Road+Ballary" data-i18n="mapsButton">Open in Google Maps ↗</a></div></section>
+  <p class="eyebrow" data-i18n="countEyebrow">
+    COUNTING DOWN TO FOREVER
+  </p>
 
-<section id="guestbook" class="section guestbook"><div class="heading"><div class="label" data-i18n="wishesLabel">05 · LEAVE A LITTLE LOVE</div><p class="eyebrow" data-i18n="wishesEyebrow">YOUR WORDS BECOME PART OF OUR STORY</p><h2 data-i18n="wishesTitle">Share your wishes</h2><p data-i18n="wishesSub">Leave a message, tell us your favourite memory, or share a photograph from our celebration. ♡</p></div>
-<div class="guest-layout"><form id="wishForm" class="wish-form"><div class="form-row"><label><span data-i18n="yourName">Your name</span><input id="guestName" required maxlength="60" placeholder="e.g. Ananya"></label><label><span data-i18n="howKnow">How do you know us?</span><input id="guestRelation" maxlength="80" placeholder="Friend / Family / College"></label></div><label><span data-i18n="yourWishes">Your wishes / experience</span><textarea id="guestMessage" required maxlength="700" rows="5" placeholder="Write something we'll treasure forever..."></textarea></label><label class="upload"><span data-i18n="addPhoto">📷 Add a wedding photo</span><input id="guestPhoto" type="file" accept="image/*"><small>Photos are stored only on this device in this demo.</small></label><div id="photoPreview" class="photo-preview"></div><button class="btn dark" type="submit" data-i18n="shareWishes">Share my wishes ♥</button><a class="share-whatsapp" id="shareWhatsapp" target="_blank" rel="noopener" href="#" data-i18n="shareWhatsApp">Share the wedding link on WhatsApp ↗</a><p id="formStatus" class="form-status"></p></form>
-<div class="guest-wall"><div class="wall-head"><span>♡</span><h3 data-i18n="loveNotes">Love notes</h3><span>♡</span></div><div id="wishWall" class="wish-wall"></div><p id="emptyWall" class="muted" data-i18n="emptyWall">Be the first to leave a little love here.</p></div></div></section>
+  <h2 data-i18n="countTitle">
+    Our wedding day is almost here
+  </h2>
 
-<section id="rsvp" class="section rsvp"><p class="eyebrow" data-i18n="rsvpEyebrow">WITH LOVE, PALAKSHI GOWDA & FAMILY</p><h2 data-i18n="rsvpTitle">Will you join us?</h2><p data-i18n="rsvpSub">Please bless Bhumika and Rakesh with your presence as they begin their forever.</p><div class="rsvp-actions"><a class="btn dark" href="tel:+919448895527" data-i18n="rsvpButton">RSVP · +91 9448895527</a><button class="btn outline" id="shareWedding" data-i18n="shareInvitation">Share this invitation ↗</button></div><p class="muted" data-i18n="neelavathi">Neelavathi · Number to be updated</p></section>
-<footer><div>B <span>♥</span> R</div><p data-i18n="footerTag">The Beginning of Forever</p><small>Bhumika & Rakesh · 13 November</small></footer>
+  <div class="timer">
 
-<div id="modal" class="modal"><div class="backdrop"></div><div class="modal-box"><button id="close">×</button><div id="mi"></div><p id="mt" class="eyebrow"></p><h2 id="mh"></h2><p id="md" class="gold"></p><hr><p id="mv"></p><p id="mw" class="what"></p><div class="dress"><span>Dress code</span><b id="mdd"></b></div><div class="special">✦ <span id="ms"></span></div><a id="map" class="btn dark" target="_blank">Open location ↗</a></div></div>
-<div id="ytMusicWrap" aria-hidden="true"><div class="yt-music-box"><button id="closeMusic" type="button" aria-label="Close music player">×</button><iframe id="ytMusic" title="Romantic wedding music" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe><p>Tap ▶ on the player if your browser blocks autoplay.</p></div></div>
+    <div>
+      <b id="d">00</b>
+      <small data-i18n="days">Days</small>
+    </div>
 
-<script src="script.js"></script></body></html>
+    <div>
+      <b id="h">00</b>
+      <small data-i18n="hours">Hours</small>
+    </div>
+
+    <div>
+      <b id="m">00</b>
+      <small data-i18n="minutes">Minutes</small>
+    </div>
+
+    <div>
+      <b id="s">00</b>
+      <small data-i18n="seconds">Seconds</small>
+    </div>
+
+  </div>
+
+  <p data-i18n="countDate">
+    13 November · Muhurtham at 8:00 AM
+  </p>
+
+</section>
+
+
+<section id="story" class="section story">
+
+  <div class="label" data-i18n="storyLabel">
+    01 · OUR STORY
+  </div>
+
+  <div class="two">
+
+    <div>
+
+      <p class="eyebrow" data-i18n="storyEyebrow">
+        FROM A MOMENT TO A LIFETIME
+      </p>
+
+      <h2>
+        <span data-i18n="storyTitle1">And suddenly,</span>
+        <br>
+        <i data-i18n="storyTitle2">forever made sense.</i>
+      </h2>
+
+    </div>
+
+    <div class="copy">
+
+      <p data-i18n="storyP1">
+        Some stories begin quietly, some unexpectedly — and then two people discover that every little moment has been leading them here.
+      </p>
+
+      <p data-i18n="storyP2">
+        From shared smiles and little adventures to the promise of walking through every chapter together, Bhumika and Rakesh are beginning their forever surrounded by the people they love.
+      </p>
+
+      <div class="signature" data-i18n="signature">
+        The Beginning of Forever ♥
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="couple" class="section couple">
+
+  <div class="person">
+
+    <img src="assets/bride_portrait.jpg" alt="Bhumika G">
+
+    <p class="eyebrow" data-i18n="brideLabel">
+      THE BRIDE
+    </p>
+
+    <h2>Bhumika G</h2>
+
+    <p>
+      <span data-i18n="daughterOf">Daughter of</span>
+      <br>
+      <b>Palakshi Gowda G</b> & <b>Neelavathi G</b>
+    </p>
+
+    <p class="muted">
+      <span data-i18n="brother">Brother</span>
+      · Gagan Gowda G
+    </p>
+
+  </div>
+
+  <div class="heart">♥</div>
+
+  <div class="person">
+
+    <img src="assets/groom_first_photo.jpg" alt="Rakesh Patil">
+
+    <p class="eyebrow" data-i18n="groomLabel">
+      THE GROOM
+    </p>
+
+    <h2>Rakesh Patil</h2>
+
+    <p>
+      <span data-i18n="sonOf">Son of</span>
+      <br>
+      <b>Pompana Gowda Patil</b> & <b>Preemalatha</b>
+    </p>
+
+  </div>
+
+</section>
+
+
+<section id="events" class="section events">
+
+  <div class="heading">
+
+    <div class="label" data-i18n="eventsLabel">
+      02 · THE CELEBRATION
+    </div>
+
+    <p class="eyebrow" data-i18n="eventsEyebrow">
+      CLICK AN EVENT TO EXPLORE
+    </p>
+
+    <h2 data-i18n="eventsTitle">
+      Wedding Events
+    </h2>
+
+    <p data-i18n="eventsSub">
+      Every celebration has its own little magic.
+    </p>
+
+  </div>
+
+  <div class="cards">
+
+    <button class="card event-haldi" data-event="haldi">
+      <span class="event-icon">🌼</span>
+      <small data-i18n="haldiName">HALDI</small>
+      <h3 data-i18n="haldiTitle">Haldi Ceremony</h3>
+      <p data-event-date="haldi">12 November · 10:00 AM</p>
+      <b data-i18n="viewDetails">View details ↗</b>
+    </button>
+
+    <button class="card event-engagement" data-event="engagement">
+      <span class="event-icon">💍</span>
+      <small data-i18n="engagementName">ENGAGEMENT</small>
+      <h3 data-i18n="engagementTitle">Ring Ceremony</h3>
+      <p data-event-date="engagement">12 November · 8:00 PM</p>
+      <b data-i18n="viewDetails">View details ↗</b>
+    </button>
+
+    <button class="card event-muhurtham" data-event="muhurtham">
+      <span class="event-icon">🪔</span>
+      <small data-i18n="muhurthamName">MUHURTHAM</small>
+      <h3 data-i18n="muhurthamTitle">Wedding Ceremony</h3>
+      <p data-event-date="muhurtham">13 November · 8:00 AM</p>
+      <b data-i18n="viewDetails">View details ↗</b>
+    </button>
+
+    <button class="card event-reception" data-event="reception">
+      <span class="event-icon">✨</span>
+      <small data-i18n="receptionName">RECEPTION</small>
+      <h3 data-i18n="receptionTitle">Reception</h3>
+      <p data-event-date="reception">13 November · 12:00 Noon</p>
+      <b data-i18n="viewDetails">View details ↗</b>
+    </button>
+
+  </div>
+
+</section>
+
+
+<section id="gallery" class="section gallery">
+
+  <div class="heading">
+
+    <div class="label" data-i18n="galleryLabel">
+      03 · OUR MOMENTS
+    </div>
+
+    <p class="eyebrow" data-i18n="galleryEyebrow">
+      A LITTLE GLIMPSE OF US
+    </p>
+
+    <h2 data-i18n="galleryTitle">
+      One favourite frame
+    </h2>
+
+    <p data-i18n="gallerySub">
+      One photograph, kept simple — because the story is already beautiful.
+    </p>
+
+  </div>
+
+  <div class="single-photo">
+
+    <figure>
+
+      <img
+        src="assets/hero_romantic.jpg"
+        alt="Bhumika and Rakesh together"
+      >
+
+      <figcaption data-i18n="galleryCaption">
+        Where every moment feels like home. ♥
+      </figcaption>
+
+    </figure>
+
+  </div>
+
+</section>
+
+
+<section id="venue" class="venue">
+
+  <div class="venue-photo">
+
+    <img
+      src="assets/venue_sri_bharathi.jpeg"
+      alt="Sri Bharathi Theertha Sabhabhavana, Sangankallu Road, Ballary"
+    >
+
+  </div>
+
+  <div class="venue-text">
+
+    <div class="label" data-i18n="venueLabel">
+      04 · FIND US
+    </div>
+
+    <p class="eyebrow" data-i18n="venueEyebrow">
+      THE WEDDING VENUE
+    </p>
+
+    <h2>
+      Sri Bharathi Theertha<br>
+      Sabhabhavana
+    </h2>
+
+    <p>
+      Sangankallu Road<br>
+      Ballary, Karnataka
+    </p>
+
+    <a
+      class="btn dark"
+      target="_blank"
+      href="https://www.google.com/maps/search/?api=1&query=Sri+Bharathi+Theertha+Sabhabhavana+Sangankallu+Road+Ballary"
+      data-i18n="mapsButton"
+    >
+      Open in Google Maps ↗
+    </a>
+
+  </div>
+
+</section>
+
+
+<section id="guestbook" class="section guestbook">
+
+  <div class="heading">
+
+    <div class="label" data-i18n="wishesLabel">
+      05 · LEAVE A LITTLE LOVE
+    </div>
+
+    <p class="eyebrow" data-i18n="wishesEyebrow">
+      YOUR WORDS BECOME PART OF OUR STORY
+    </p>
+
+    <h2 data-i18n="wishesTitle">
+      Share your wishes
+    </h2>
+
+    <p data-i18n="wishesSub">
+      Leave a message, tell us your favourite memory, or share a photograph from our celebration. ♡
+    </p>
+
+  </div>
+
+  <div class="guest-layout">
+
+    <form id="wishForm" class="wish-form">
+
+      <div class="form-row">
+
+        <label>
+          <span data-i18n="yourName">Your name</span>
+          <input
+            id="guestName"
+            required
+            maxlength="60"
+            placeholder="e.g. Ananya"
+          >
+        </label>
+
+        <label>
+          <span data-i18n="howKnow">How do you know us?</span>
+          <input
+            id="guestRelation"
+            maxlength="80"
+            placeholder="Friend / Family / College"
+          >
+        </label>
+
+      </div>
+
+      <label>
+        <span data-i18n="yourWishes">Your wishes / experience</span>
+        <textarea
+          id="guestMessage"
+          required
+          maxlength="700"
+          rows="5"
+          placeholder="Write something we'll treasure forever..."
+        ></textarea>
+      </label>
+
+      <label class="upload">
+
+        <span data-i18n="addPhoto">
+          📷 Add a wedding photo
+        </span>
+
+        <input
+          id="guestPhoto"
+          type="file"
+          accept="image/*"
+        >
+
+        <small>
+          Photos are stored only on this device in this demo.
+        </small>
+
+      </label>
+
+      <div id="photoPreview" class="photo-preview"></div>
+
+      <button
+        class="btn dark"
+        type="submit"
+        data-i18n="shareWishes"
+      >
+        Share my wishes ♥
+      </button>
+
+      <a
+        class="share-whatsapp"
+        id="shareWhatsapp"
+        target="_blank"
+        rel="noopener"
+        href="#"
+        data-i18n="shareWhatsApp"
+      >
+        Share the wedding link on WhatsApp ↗
+      </a>
+
+      <p id="formStatus" class="form-status"></p>
+
+    </form>
+
+
+    <div class="guest-wall">
+
+      <div class="wall-head">
+        <span>♡</span>
+        <h3 data-i18n="loveNotes">Love notes</h3>
+        <span>♡</span>
+      </div>
+
+      <div id="wishWall" class="wish-wall"></div>
+
+      <p
+        id="emptyWall"
+        class="muted"
+        data-i18n="emptyWall"
+      >
+        Be the first to leave a little love here.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="rsvp" class="section rsvp">
+
+  <p class="eyebrow" data-i18n="rsvpEyebrow">
+    WITH LOVE, PALAKSHI GOWDA & FAMILY
+  </p>
+
+  <h2 data-i18n="rsvpTitle">
+    Will you join us?
+  </h2>
+
+  <p data-i18n="rsvpSub">
+    Please bless Bhumika and Rakesh with your presence as they begin their forever.
+  </p>
+
+  <div class="rsvp-actions">
+
+    <a
+      class="btn dark"
+      href="tel:+919448895527"
+      data-i18n="rsvpButton"
+    >
+      RSVP · +91 9448895527
+    </a>
+
+    <button
+      class="btn outline"
+      id="shareWedding"
+      data-i18n="shareInvitation"
+    >
+      Share this invitation ↗
+    </button>
+
+  </div>
+
+  <p class="muted" data-i18n="neelavathi">
+    Neelavathi · Number to be updated
+  </p>
+
+</section>
+
+
+<footer>
+
+  <div>B <span>♥</span> R</div>
+
+  <p data-i18n="footerTag">
+    The Beginning of Forever
+  </p>
+
+  <small>
+    Bhumika & Rakesh · 13 November
+  </small>
+
+</footer>
+
+
+<div id="modal" class="modal">
+
+  <div class="backdrop"></div>
+
+  <div class="modal-box">
+
+    <button id="close">×</button>
+
+    <div id="mi"></div>
+
+    <p id="mt" class="eyebrow"></p>
+
+    <h2 id="mh"></h2>
+
+    <p id="md" class="gold"></p>
+
+    <hr>
+
+    <p id="mv"></p>
+
+    <p id="mw" class="what"></p>
+
+    <div class="dress">
+      <span>Dress code</span>
+      <b id="mdd"></b>
+    </div>
+
+    <div class="special">
+      ✦ <span id="ms"></span>
+    </div>
+
+    <a
+      id="map"
+      class="btn dark"
+      target="_blank"
+    >
+      Open location ↗
+    </a>
+
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
