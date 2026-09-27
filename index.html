@@ -675,6 +675,76 @@
 
 
 <script src="script.js"></script>
+<script>
+function openWeddingCard(card) {
+  const key = card.getAttribute('data-event');
 
+  const data = {
+    haldi: {
+      icon: '🌼',
+      title: 'HALDI',
+      heading: 'Haldi Ceremony',
+      date: '12 November · 10:00 AM',
+      venue: 'PKGB, Koluru, Ballary',
+      text: 'A joyful celebration filled with haldi, flowers, music, laughter and playful moments as the bride and groom get covered in love and blessings. 💛🌼',
+      dress: '💛 Yellow & White — classic and elegant',
+      special: 'Come dressed in sunshine and ready for a splash of haldi! 💛'
+    },
+    engagement: {
+      icon: '💍',
+      title: 'ENGAGEMENT',
+      heading: 'Ring Ceremony',
+      date: '12 November · 8:00 PM',
+      venue: 'Sri Bharathi Theertha Sabhabhavana, Sangankallu Road',
+      text: 'An intimate celebration of their love as they exchange rings and officially begin the journey towards forever. 💍✨',
+      dress: 'Pastel & Elegant',
+      special: 'A beautiful beginning deserves beautiful celebrations.'
+    },
+    muhurtham: {
+      icon: '🪔',
+      title: 'MUHURTHAM',
+      heading: 'Wedding Ceremony',
+      date: '13 November · 8:00 AM',
+      venue: 'Sri Bharathi Theertha Sabhabhavana, Sangankallu Road',
+      text: 'The sacred wedding ceremony where the couple takes their vows and begins their journey together, surrounded by the blessings of their families and loved ones. 🪔❤️',
+      dress: '🌺 Traditional Indian Wear',
+      special: 'Bless us with your presence as we begin our forever. 🪷'
+    },
+    reception: {
+      icon: '✨',
+      title: 'RECEPTION',
+      heading: 'Reception',
+      date: '13 November · 12:00 Noon',
+      venue: 'Sri Bharathi Theertha Sabhabhavana, Sangankallu Road',
+      text: 'An elegant afternoon celebrating the newlyweds with family and friends, followed by delicious food, music, photographs and lots of beautiful memories. ✨🥂',
+      dress: 'Soft luxury dress code',
+      special: 'Dress to dazzle as we celebrate the beginning of forever. ✨'
+    }
+  };
+
+  const e = data[key];
+  if (!e) return;
+
+  document.getElementById('mi').textContent = e.icon;
+  document.getElementById('mt').textContent = e.title;
+  document.getElementById('mh').textContent = e.heading;
+  document.getElementById('md').textContent = e.date;
+  document.getElementById('mv').textContent = e.venue;
+  document.getElementById('mw').textContent = e.text;
+  document.getElementById('mdd').textContent = e.dress;
+  document.getElementById('ms').textContent = e.special;
+
+  const modal = document.getElementById('modal');
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+document.querySelectorAll('.card[data-event]').forEach(card => {
+  card.addEventListener('click', function(e) {
+    e.preventDefault();
+    openWeddingCard(this);
+  });
+});
+</script>
 </body>
 </html>
